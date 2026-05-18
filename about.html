@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | Sri Vinayaka Hospital</title>
+
+  <meta name="description" content="About Sri Vinayaka Hospital. Trusted healthcare, affordable medical care, expert doctors, advanced facilities, diagnostics, emergency care and compassionate treatment in Bengaluru.">
+<link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    .about-page {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #00b894;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .hero-content h1 {
+      font-size: 52px;
+      color: #0b4f9c;
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+      color: #5f6b7a;
+      margin-bottom: 18px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 22px;
+      display: block;
+      box-shadow: 0 20px 45px rgba(11, 79, 156, 0.16);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid #e8eef6;
+      box-shadow: 0 8px 25px rgba(11, 79, 156, 0.07);
+    }
+
+    .stat-card h2 {
+      color: #0b4f9c;
+      font-size: 36px;
+      margin-bottom: 6px;
+    }
+
+    .stat-card p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: #667085;
+    }
+
+    .mission-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 80px;
+    }
+
+    .mv-card {
+      background: #ffffff;
+      padding: 42px;
+      border-radius: 22px;
+      border: 1px solid #e8eef6;
+      box-shadow: 0 10px 30px rgba(11, 79, 156, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mv-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 42px;
+      width: 70px;
+      height: 5px;
+      background: linear-gradient(135deg, #0b4f9c, #00b894);
+      border-radius: 0 0 12px 12px;
+    }
+
+    .mv-card h2 {
+      color: #0b4f9c;
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    .mv-card p {
+      color: #5f6b7a;
+      font-size: 15.5px;
+      margin-bottom: 14px;
+    }
+
+    .trust-section {
+      margin-bottom: 80px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: 42px;
+      color: #0b4f9c;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      max-width: 780px;
+      margin: auto;
+      color: #667085;
+      font-size: 16px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .trust-card {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid #e8eef6;
+      box-shadow: 0 10px 28px rgba(11, 79, 156, 0.07);
+      transition: 0.35s;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(11, 79, 156, 0.14);
+    }
+
+    .trust-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: #eef9f6;
+      color: #00b894;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 22px;
+    }
+
+    .trust-card h3 {
+      color: #0b4f9c;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .trust-card p {
+      color: #667085;
+      font-size: 15px;
+    }
+
+    .leader-section {
+      margin-bottom: 80px;
+    }
+
+    .leader-card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      margin-bottom: 30px;
+      border: 1px solid #e8eef6;
+      box-shadow: 0 12px 35px rgba(11, 79, 156, 0.08);
+    }
+
+    .leader-photo {
+      background: linear-gradient(135deg, #0b4f9c, #00b894);
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .leader-photo h3 {
+      font-size: 32px;
+      line-height: 1.3;
+    }
+
+    .leader-content {
+      padding: 42px;
+    }
+
+    .leader-content h2 {
+      color: #0b4f9c;
+      font-size: 34px;
+      margin-bottom: 6px;
+    }
+
+    .leader-content h3 {
+      color: #111827;
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .leader-content h4 {
+      color: #00a878;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .leader-content p {
+      color: #5f6b7a;
+      font-size: 15.5px;
+      margin-bottom: 14px;
+    }
+
+    .story-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 80px;
+    }
+
+    .story-card {
+      background: #ffffff;
+      padding: 42px;
+      border-radius: 22px;
+      border: 1px solid #e8eef6;
+      box-shadow: 0 10px 30px rgba(11, 79, 156, 0.08);
+    }
+
+    .story-card h2 {
+      color: #0b4f9c;
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    .story-card p {
+      color: #5f6b7a;
+      font-size: 15.5px;
+      margin-bottom: 16px;
+    }
+
+    .choose-section {
+      background: #ffffff;
+      padding: 55px;
+      border-radius: 24px;
+      margin-bottom: 80px;
+      border: 1px solid #e8eef6;
+      box-shadow: 0 12px 35px rgba(11, 79, 156, 0.08);
+    }
+
+    .choose-section h2 {
+      color: #0b4f9c;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .choose-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .choose-item {
+      background: #f7f9fc;
+      padding: 22px;
+      border-radius: 16px;
+      color: #344054;
+      font-size: 14.5px;
+      font-weight: 600;
+      border: 1px solid #e8eef6;
+    }
+
+    .choose-item span {
+      color: #00b894;
+      margin-right: 8px;
+      font-weight: 900;
+    }
+
+    .support-section {
+      background: linear-gradient(135deg, #0b4f9c, #00b894);
+      color: #ffffff;
+      padding: 65px 45px;
+      border-radius: 24px;
+      text-align: center;
+    }
+
+    .support-section h2 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .support-section p {
+      max-width: 780px;
+      margin: auto;
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 28px;
+    }
+
+    .support-btn {
+      display: inline-block;
+      background: #ffffff;
+      color: #0b4f9c;
+      padding: 15px 34px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    @media(max-width: 992px) {
+      .hero-section,
+      .mission-vision,
+      .story-section,
+      .leader-card {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid,
+      .choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-content h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .about-page {
+        padding: 50px 15px;
+      }
+
+      .hero-content h1,
+      .section-heading h2,
+      .choose-section h2,
+      .support-section h2 {
+        font-size: 32px;
+      }
+
+      .mv-card,
+      .story-card,
+      .choose-section,
+      .leader-content,
+      .support-section {
+        padding: 30px 22px;
+      }
+
+      .stats-grid,
+      .trust-grid,
+      .choose-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .leader-photo {
+        min-height: 240px;
+      }
+    }
+
+
+    .hero-visual {
+  position: relative;
+
+  min-height: 520px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(135deg,
+    rgba(11,79,156,0.08),
+    rgba(0,184,148,0.08));
+
+  overflow: hidden;
+
+  border: 1px solid #e8eef6;
+}
+
+.floating-card {
+  position: absolute;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 30px;
+
+  width: 240px;
+
+  box-shadow: 0 20px 45px rgba(11,79,156,0.10);
+
+  border: 1px solid #eef2f7;
+
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+.floating-card h3 {
+  color: #0b4f9c;
+
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+.floating-card p {
+  color: #667085;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.card-one {
+  top: 50px;
+  left: 40px;
+}
+
+.card-two {
+  top: 180px;
+  right: 45px;
+
+  animation-delay: 1s;
+}
+
+.card-three {
+  bottom: 45px;
+  left: 90px;
+
+  animation-delay: 2s;
+}
+
+.circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(135deg,
+    rgba(11,79,156,0.12),
+    rgba(0,184,148,0.12));
+}
+
+.circle-one {
+  width: 220px;
+  height: 220px;
+
+  top: -60px;
+  right: -60px;
+}
+
+.circle-two {
+  width: 180px;
+  height: 180px;
+
+  bottom: -40px;
+  right: 120px;
+}
+
+@keyframes floatCard {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media(max-width: 768px){
+
+  .hero-visual {
+    min-height: 460px;
+  }
+
+  .floating-card {
+    width: 200px;
+    padding: 22px;
+  }
+
+  .floating-card h3 {
+    font-size: 34px;
+  }
+
+  .card-one {
+    left: 20px;
+  }
+
+  .card-two {
+    right: 20px;
+  }
+
+  .card-three {
+    left: 50px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  
+<header class="site-header">
+  <nav class="navbar">
+    <div class="brand">
+      <img src="assets/logo.webp" alt="Sri Vinayaka Hospital Logo" class="logo">
+      <span>Sri Vinayaka Hospital</span>
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+            <li class="has-mega-menu">
+              <a href="service.html" class="services-link">Services ▾</a>
+
+              <div class="mega-menu">
+                <div class="mega-col">
+                  <h3>Core Services</h3>
+                  <a href="service.html#emergency">Emergency Care</a>
+                  <a href="service.html#general-medicine">General Medicine</a>
+                  <a href="service.html#gynecology">Gynecology</a>
+                  <a href="service.html#pediatrics">Pediatrics</a>
+                </div>
+
+                <div class="mega-col">
+                  <h3>Specialities</h3>
+                  <a href="service.html#orthopedics">Orthopedics</a>
+                  <a href="service.html#cardiology">Cardiology</a>
+                  <a href="service.html#general-surgery">General Surgery</a>
+                  <a href="service.html#physiotherapy">Physiotherapy</a>
+                </div>
+
+                <div class="mega-col">
+                  <h3>Surgeries</h3>
+
+                  <a href="surgeries.html?type=proctology">Proctology</a>
+
+                  <a href="surgeries.html?type=laparoscopy">Laparoscopy</a>
+
+                  <a href="surgeries.html?type=urology">Urology</a>
+
+                  <a href="surgeries.html?type=cosmetic">Cosmetic Surgery</a>
+
+                  <a href="surgeries.html?type=orthopedics">Orthopedics</a>
+
+                  <a href="surgeries.html?type=ophthalmology">Ophthalmology</a>
+
+                  <a href="surgeries.html?type=vascular">Vascular Surgery</a>
+
+                  <a href="surgeries.html?type=mtp">MTP</a>
+                </div>
+              </div>
+            </li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+
+        <button class="nav-btn" id="openPopup">
+          Book Appointment
+        </button>
+  </nav>
+</header>
+
+<section class="about-page">
+  <div class="container">
+
+    <div class="hero-section">
+      <div class="hero-content">
+        <span class="section-label">About Our Hospital</span>
+
+        <h1>Trusted Healthcare With Compassionate Patient Care</h1>
+
+        <p>
+          Sri Vinayaka Hospital was established 25+ years ago with a mission
+          to provide high-quality medical care at affordable costs for families
+          across Bengaluru.
+        </p>
+
+        <p>
+          We provide patient-focused healthcare services with experienced
+          doctors, modern facilities, emergency support, diagnostics,
+          inpatient care and advanced surgical treatment support.
+        </p>
+
+        <p>
+          Our hospital is committed to delivering safe, transparent and
+          compassionate care so every patient receives the right guidance,
+          timely treatment and a comfortable healthcare experience.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h2>25+</h2>
+            <p>Years of Healthcare</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>35+</h2>
+            <p>Years Leadership</p>
+          </div>
+
+          <div class="stat-card">
+            <h2>24/7</h2>
+            <p>Emergency Support</p>
+          </div>
+        </div>
+      </div>
+
+<div class="hero-visual">
+
+  <div class="floating-card card-one">
+    <h3>25+</h3>
+    <p>Years of Trusted Healthcare</p>
+  </div>
+
+  <div class="floating-card card-two">
+    <h3>24/7</h3>
+    <p>Emergency & Patient Support</p>
+  </div>
+
+  <div class="floating-card card-three">
+    <h3>NABH</h3>
+    <p>Recognized Healthcare Support</p>
+  </div>
+
+  <div class="circle circle-one"></div>
+  <div class="circle circle-two"></div>
+
+</div>
+    </div>
+
+    <div class="mission-vision">
+      <div class="mv-card">
+        <h2>Our Vision</h2>
+
+        <p>
+          Our vision is to be one of Bengaluru’s most trusted healthcare
+          destinations by providing affordable, ethical and quality medical
+          care for every patient.
+        </p>
+
+        <p>
+          We aim to combine experienced doctors, updated medical technology,
+          transparent communication and compassionate support to create a safer
+          and more comfortable healthcare journey.
+        </p>
+      </div>
+
+      <div class="mv-card">
+        <h2>Our Mission</h2>
+
+        <p>
+          Our mission is to provide accurate diagnosis, timely treatment,
+          expert medical guidance and end-to-end patient care under one roof.
+        </p>
+
+        <p>
+          We strive to support patients and families with reliable healthcare
+          services, modern facilities and personalized attention at every stage
+          of treatment and recovery.
+        </p>
+      </div>
+    </div>
+
+    <div class="trust-section">
+      <div class="section-heading">
+        <span class="section-label">Our Strength</span>
+
+        <h2>Care Built Around Patients</h2>
+
+        <p>
+          Sri Vinayaka Hospital combines medical expertise, diagnostic support,
+          hospital facilities and patient-first service to make healthcare
+          smoother, safer and more transparent.
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">⚕</div>
+
+          <h3>Expert Doctors</h3>
+
+          <p>
+            Experienced medical professionals guide patients through
+            consultation, diagnosis, treatment and recovery.
+          </p>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🏥</div>
+
+          <h3>Modern Facilities</h3>
+
+          <p>
+            We offer hospital services including diagnostics, emergency care,
+            operation theatre support, ICU and inpatient facilities.
+          </p>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🤝</div>
+
+          <h3>Patient-First Support</h3>
+
+          <p>
+            Our team assists patients with appointments, treatment guidance,
+            admission support, discharge care and follow-up coordination.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-section">
+      <div class="section-heading">
+        <span class="section-label">Leadership</span>
+
+        <h2>Meet Our Leadership Team</h2>
+      </div>
+
+      <div class="leader-card">
+        <div class="leader-photo">
+          <h3>Founder</h3>
+        </div>
+
+        <div class="leader-content">
+          <h2>Founder</h2>
+
+          <h3>Dr. Javaji Ravi Prasad</h3>
+
+          <h4>MBBS, MD</h4>
+
+          <p>
+            Dr. Javaji Ravi Prasad is a visionary medical leader with over
+            35 years of experience in Radiology. He has also served as a
+            Professor in Radiology and has guided many medical students through
+            his academic and clinical experience.
+          </p>
+
+          <p>
+            He is the Founder and Managing Director of Sri Vinayaka Hospital
+            and Raghavendra Diagnostic Centre. Under his leadership, the
+            hospital has grown as a trusted healthcare center with diagnostic,
+            emergency, surgical and inpatient care support.
+          </p>
+        </div>
+      </div>
+
+      <div class="leader-card">
+        <div class="leader-photo">
+          <h3>Managing<br>Director</h3>
+        </div>
+
+        <div class="leader-content">
+          <h2>Managing Director</h2>
+
+          <h3>Mr. Sidharth Ravi Javaji</h3>
+
+          <h4>BBM, MBA</h4>
+
+          <p>
+            Mr. Sidharth Ravi Javaji oversees hospital operations and focuses
+            on improving patient experience, hospital coordination and service
+            quality across departments.
+          </p>
+
+          <p>
+            His goal is to make Sri Vinayaka Hospital a reliable healthcare
+            destination where patients receive affordable treatment, transparent
+            communication and smooth support throughout their care journey.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-section">
+      <div class="story-card">
+        <span class="section-label">Get To Know Us</span>
+
+        <h2>Our People, Our Strength</h2>
+
+        <p>
+          At Sri Vinayaka Hospital, our greatest strength is our people.
+          From experienced doctors and compassionate nurses to diagnostic teams,
+          coordinators and support staff, every member works with dedication
+          toward patient well-being.
+        </p>
+
+        <p>
+          We believe healthcare should be built on trust, clear communication
+          and responsible care. Our team works together to make every patient’s
+          journey safe, smooth and comfortable.
+        </p>
+      </div>
+
+      <div class="story-card">
+        <span class="section-label">Our Story</span>
+
+        <h2>25+ Years of Trusted Healthcare</h2>
+
+        <p>
+          Sri Vinayaka Hospital was founded with the goal of making quality
+          healthcare accessible and affordable for families in Bengaluru.
+        </p>
+
+        <p>
+          Over the years, the hospital has continued to serve patients with
+          general medicine, women care, pediatrics, emergency services,
+          diagnostics, surgeries, inpatient care and specialist consultations.
+        </p>
+
+        <p>
+          Our journey continues with the same purpose: to provide compassionate,
+          ethical and patient-focused healthcare for every individual who trusts
+          us with their care.
+        </p>
+      </div>
+    </div>
+
+    <div class="choose-section">
+      <h2>Why Choose Sri Vinayaka Hospital?</h2>
+
+      <div class="choose-grid">
+        <div class="choose-item"><span>✓</span>25+ years of trusted care</div>
+        <div class="choose-item"><span>✓</span>NABH Recognized Healthcare Support</div>
+        <div class="choose-item"><span>✓</span>Advanced diagnostic support</div>
+        <div class="choose-item"><span>✓</span>Emergency care services</div>
+        <div class="choose-item"><span>✓</span>Women and child care</div>
+        <div class="choose-item"><span>✓</span>Surgical treatment support</div>
+        <div class="choose-item"><span>✓</span>ICU and inpatient facilities</div>
+        <div class="choose-item"><span>✓</span>Affordable healthcare services</div>
+      </div>
+    </div>
+
+    <div class="support-section">
+      <h2>Need Medical Support?</h2>
+
+      <p>
+        Our team is available to guide you with consultations, diagnostics,
+        emergency care, treatment planning and hospital services. Reach out to
+        Sri Vinayaka Hospital for reliable and compassionate healthcare support.
+      </p>
+
+      <a href="contact.html" class="support-btn">
+        Contact Hospital
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- POPUP -->
+
+<div class="appointment-popup" id="appointmentPopup">
+
+  <div class="popup-overlay" id="closePopup"></div>
+
+  <div class="popup-box">
+
+    <button class="popup-close" id="closePopupBtn">
+      ×
+    </button>
+
+    <span class="popup-tag">
+      Sri Vinayaka Hospital
+    </span>
+
+    <h2>
+      Book Appointment
+    </h2>
+
+    <p>
+      Fill your details and our team will contact you shortly.
+    </p>
+
+    <form class="appointment-form" id="telegramForm">
+
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Patient Name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <input
+          type="tel"
+          placeholder="Mobile Number"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+
+        <select required>
+
+          <option value="">
+            Select Service
+          </option>
+
+          <option>
+            General Medicine
+          </option>
+
+          <option>
+            Gynecology
+          </option>
+
+          <option>
+            Pediatrics
+          </option>
+
+          <option>
+            Orthopedics
+          </option>
+
+          <option>
+            Cardiology
+          </option>
+
+          <option>
+            General Surgery
+          </option>
+
+        </select>
+
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Submit Appointment
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<div class="success-popup" id="successPopup">
+
+  <div class="success-box">
+
+    <div class="success-icon">
+      ✓
+    </div>
+
+    <h3 id="successTitle">
+      Hello!
+    </h3>
+
+    <p>
+      Your appointment booking is confirmed.
+      Our team will get back to you shortly.
+    </p>
+
+    <button id="successClose">
+      Close
+    </button>
+
+  </div>
+
+</div>
+
+
+<div class="footer-seo-links">
+
+  <div class="seo-text-col">
+    <h4>For Women</h4>
+    <span>Pregnancy Care</span>
+    <span>Women Doctor Consultation</span>
+    <span>Gynecology Checkup</span>
+    <span>Period Problems Treatment</span>
+    <span>Mother & Baby Care</span>
+  </div>
+
+  <div class="seo-text-col">
+    <h4>For Children</h4>
+    <span>Child Doctor Consultation</span>
+    <span>Baby Health Checkup</span>
+    <span>Fever & Cold Treatment</span>
+    <span>Newborn Care</span>
+    <span>Growth Checkup</span>
+  </div>
+
+  <div class="seo-text-col">
+    <h4>Common Health Needs</h4>
+    <span>General Doctor Consultation</span>
+    <span>Fever Treatment</span>
+    <span>Diabetes & BP Checkup</span>
+    <span>Emergency Care</span>
+    <span>Health Checkup</span>
+  </div>
+
+  <div class="seo-text-col">
+    <h4>Surgery Support</h4>
+    <span>Piles Treatment</span>
+    <span>Hernia Surgery</span>
+    <span>Kidney Stone Treatment</span>
+    <span>Gallbladder Stone Surgery</span>
+    <span>Bone & Joint Treatment</span>
+  </div>
+
+  <div class="seo-text-col">
+    <h4>Tests & Facilities</h4>
+    <span>Blood Test</span>
+    <span>Ultrasound Scan</span>
+    <span>X-Ray</span>
+    <span>ECG Test</span>
+    <span>ICU & Inpatient Care</span>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
