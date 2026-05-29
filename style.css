@@ -2345,9 +2345,9 @@ section[id] {
 
 .hospital-tagline{
   font-size:13px;
-  font-weight:600;
-  color:#7a9aa5;
-  letter-spacing:0.5px;
+  font-weight:800;
+  color:#d63384; /* premium women's pink */
+  letter-spacing:0.4px;
   margin-top:4px;
 }
 
