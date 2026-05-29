@@ -258,3 +258,21 @@ if(heroPopupBtn){
   });
 
 }
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+      const popup = document.getElementById("callPopup");
+
+      if(!popup) return;
+
+      setTimeout(() => {
+          popup.classList.add("show");
+      }, 10000);
+
+      const closeBtn = popup.querySelector(".popup-close-btn");
+
+      closeBtn.addEventListener("click", () => {
+          popup.classList.remove("show");
+      });
+
+  });

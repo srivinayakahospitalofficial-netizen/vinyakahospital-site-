@@ -28,12 +28,28 @@
 </head>
 <body>
 
-<header class="site-header">
+  
+  <header class="site-header">
   <nav class="navbar">
-    <div class="brand">
-      <img src="assets/logo.webp" alt="Sri Vinayaka Hospital Logo" class="logo">
-      <span>Sri Vinayaka Hospital</span>
+<div class="brand">
+
+    <div class="brand-left">
+        <img src="assets/logo.webp" alt="" class="logo">
+
+        <div class="brand-text">
+            <span class="hospital-name">Sri Vinayaka Hospital</span>
+            <small class="hospital-tagline">
+                Women & Multispeciality Hospital
+            </small>
+        </div>
     </div>
+
+    <div class="brand-badges">
+        <img src="assets/25.jpg" alt="" class="badge-logo">
+        <img src="assets/nabh.png" alt="" class="badge-logo">
+    </div>
+
+</div>
 
     <ul class="nav-menu">
       <li><a href="index.html" class="active">Home</a></li>
@@ -80,6 +96,7 @@
               </div>
             </li>
       <li><a href="Contact.html">Contact Us</a></li>
+      
     </ul>
 
         <button class="nav-btn" id="openPopup">
@@ -87,6 +104,10 @@
         </button>
   </nav>
 </header>
+
+
+
+
 <main class="service-page">
 
 <section class="service-hero">
@@ -1160,6 +1181,28 @@
 
 <script src="script.js"></script>
 </main>
+
+<a href="tel:+917204099115" class="floating-call">
+    <i class="fas fa-phone-alt"></i>
+</a>
+
+
+<div class="call-popup" id="callPopup">
+    <button class="popup-close-btn">&times;</button>
+
+    <h4>Need Help?</h4>
+
+    <p>
+        Looking for a doctor, surgery, scan or appointment?
+    </p>
+
+    <a href="tel:+917204099115">
+        📞 Call Now
+    </a>
+</div>
+
+
+
 <script>
 if (window.location.hash) {
 
