@@ -164,8 +164,9 @@ if (appointmentForm) {
 
     try {
 
-      await fetch(
-        "https://vinayaka-telegram-api.onrender.com/send-lead",
+await fetch(
+  "https://vinayaka-telegram-api-clean.onrender.com/send-lead",
+
         {
           method: "POST",
           headers: {
@@ -228,8 +229,8 @@ if (mtpLeadForm) {
 
     try {
 
-      await fetch(
-        "https://vinayaka-telegram-api.onrender.com/send-lead",
+await fetch(
+  "https://vinayaka-telegram-api-clean.onrender.com/send-lead",
         {
           method: "POST",
           headers: {
