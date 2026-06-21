@@ -159,37 +159,22 @@ if (appointmentForm) {
     const service =
       appointmentForm.querySelector("select").value;
 
-    const BOT_TOKEN =
-      "8820960604:AAFxAf8cxPeOBNUOoyUSRhqrMH3CJhz95mU";
-
-    const CHAT_ID =
-      "-1003967286332";
-
-    const message = `
-🏥 Sri Vinayaka Hospital Appointment
-
-👤 Name: ${name}
-
-📞 Mobile: ${phone}
-
-🩺 Service: ${service}
-`;
-
     try {
 
-      await fetch(
-        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            chat_id: CHAT_ID,
-            text: message
-          })
-        }
-      );
+          await fetch(
+            "https://vinayaka-telegram-api.onrender.com/send-lead",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                name: name,
+                phone: phone,
+                service: service
+              })
+            }
+          );
 
       successTitle.innerText =
         `Hello ${name}!`;
@@ -278,7 +263,6 @@ if(heroPopupBtn){
   });
 
 // mtp
-
 const mtpLeadForm = document.getElementById("mtpLeadForm");
 
 if (mtpLeadForm) {
@@ -299,32 +283,21 @@ if (mtpLeadForm) {
     const phone =
       document.getElementById("mtpMobile").value;
 
-    const BOT_TOKEN =
-      "8820960604:AAFxAf8cxPeOBNUOoyUSRhqrMH3CJhz95mU";
-
-    const CHAT_ID =
-      "-1003967286332";
-
-    const message = `
-🏥 Sri Vinayaka Hospital MTP Lead
-
-👤 Name: ${name}
-
-📞 Mobile: ${phone}
-`;
+    const service = "MTP Consultation";
 
     try {
 
       await fetch(
-        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        "https://vinayaka-telegram-api.onrender.com/send-lead",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            chat_id: CHAT_ID,
-            text: message
+            name: name,
+            phone: phone,
+            service: service
           })
         }
       );

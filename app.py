@@ -2,7 +2,11 @@ from flask import Flask, request, jsonify
 import requests
 import os
 
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
+
 
 BOT_TOKEN = "8820960604:AAFxAf8cxPeOBNUOoyUSRhqrMH3CJhz95mU"
 CHAT_ID = "-1003967286332"
