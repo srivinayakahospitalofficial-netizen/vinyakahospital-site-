@@ -276,3 +276,74 @@ if(heroPopupBtn){
       });
 
   });
+
+// mtp
+
+const mtpLeadForm = document.getElementById("mtpLeadForm");
+
+if (mtpLeadForm) {
+
+  mtpLeadForm.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+    const submitBtn =
+      mtpLeadForm.querySelector(".mtp-submit-btn");
+
+    submitBtn.innerText = "Submitting...";
+    submitBtn.disabled = true;
+
+    const name =
+      document.getElementById("mtpName").value;
+
+    const phone =
+      document.getElementById("mtpMobile").value;
+
+    const BOT_TOKEN =
+      "8820960604:AAFxAf8cxPeOBNUOoyUSRhqrMH3CJhz95mU";
+
+    const CHAT_ID =
+      "-1003967286332";
+
+    const message = `
+🏥 Sri Vinayaka Hospital MTP Lead
+
+👤 Name: ${name}
+
+📞 Mobile: ${phone}
+`;
+
+    try {
+
+      await fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: message
+          })
+        }
+      );
+
+      alert("Thank you! Our team will contact you shortly.");
+
+      mtpLeadForm.reset();
+
+    } catch (error) {
+
+      alert("Something went wrong. Please try again.");
+
+    } finally {
+
+      submitBtn.innerText = "Book Free Appointment";
+      submitBtn.disabled = false;
+
+    }
+
+  });
+
+}
