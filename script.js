@@ -140,6 +140,18 @@ const successTitle =
 const successClose =
   document.getElementById("successClose");
 
+if (successClose) {
+
+  successClose.addEventListener("click", () => {
+
+    successPopup.classList.remove("active");
+
+  });
+
+}
+
+
+
 if (appointmentForm) {
 
   appointmentForm.addEventListener("submit", async function (e) {
