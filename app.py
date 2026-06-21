@@ -1,12 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 import os
 
-from flask_cors import CORS
-
 app = Flask(__name__)
 CORS(app)
-
 
 BOT_TOKEN = "8820960604:AAFxAf8cxPeOBNUOoyUSRhqrMH3CJhz95mU"
 CHAT_ID = "-1003967286332"
@@ -20,13 +18,15 @@ def home():
 @app.route("/send-lead", methods=["POST"])
 def send_lead():
 
-    data = request.get_json()
+    try:
 
-    name = data.get("name", "")
-    phone = data.get("phone", "")
-    service = data.get("service", "")
+        data = request.get_json()
 
-    message = f"""
+        name = data.get("name", "")
+        phone = data.get("phone", "")
+        service = data.get("service", "")
+
+        message = f"""
 🏥 Sri Vinayaka Hospital Lead
 
 👤 Name: {name}
@@ -34,15 +34,26 @@ def send_lead():
 🩺 Service: {service}
 """
 
-    requests.post(
-        f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-        json={
-            "chat_id": CHAT_ID,
-            "text": message
-        }
-    )
+        response = requests.post(
+            f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+            json={
+                "chat_id": CHAT_ID,
+                "text": message
+            },
+            timeout=20
+        )
 
-    return jsonify({"success": True})
+        return jsonify({
+            "success": True,
+            "telegram_status": response.status_code
+        })
+
+    except Exception as e:
+
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 500
 
 
 if __name__ == "__main__":

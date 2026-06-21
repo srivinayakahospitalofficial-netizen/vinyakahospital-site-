@@ -125,6 +125,9 @@ if(overlay){
 
 }
 
+
+// backend 
+
 const appointmentForm =
   document.getElementById("telegramForm");
 
@@ -161,20 +164,20 @@ if (appointmentForm) {
 
     try {
 
-          await fetch(
-            "https://vinayaka-telegram-api.onrender.com/send-lead",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({
-                name: name,
-                phone: phone,
-                service: service
-              })
-            }
-          );
+      await fetch(
+        "https://vinayaka-telegram-api.onrender.com/send-lead",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            name,
+            phone,
+            service
+          })
+        }
+      );
 
       successTitle.innerText =
         `Hello ${name}!`;
@@ -186,6 +189,8 @@ if (appointmentForm) {
       appointmentForm.reset();
 
     } catch (error) {
+
+      console.error(error);
 
       alert("Something went wrong. Please try again.");
 
@@ -201,68 +206,6 @@ if (appointmentForm) {
 
 }
 
-if (successClose) {
-
-  successClose.addEventListener("click", function () {
-
-    successPopup.classList.remove("active");
-
-  });
-
-}
-
-if (successClose) {
-
-  successClose.addEventListener("click", function () {
-
-    successPopup.classList.remove("active");
-
-  });
-
-}
-
-if(successClose){
-
-  successClose.addEventListener("click", function(){
-
-    successPopup.classList.remove("active");
-
-  });
-
-}
-
-const heroPopupBtn =
-  document.getElementById("openPopupHero");
-
-if(heroPopupBtn){
-
-  heroPopupBtn.addEventListener("click", () => {
-
-    popup.classList.add("active");
-
-  });
-
-}
-
-  document.addEventListener("DOMContentLoaded", () => {
-
-      const popup = document.getElementById("callPopup");
-
-      if(!popup) return;
-
-      setTimeout(() => {
-          popup.classList.add("show");
-      }, 10000);
-
-      const closeBtn = popup.querySelector(".popup-close-btn");
-
-      closeBtn.addEventListener("click", () => {
-          popup.classList.remove("show");
-      });
-
-  });
-
-// mtp
 const mtpLeadForm = document.getElementById("mtpLeadForm");
 
 if (mtpLeadForm) {
@@ -283,8 +226,6 @@ if (mtpLeadForm) {
     const phone =
       document.getElementById("mtpMobile").value;
 
-    const service = "MTP Consultation";
-
     try {
 
       await fetch(
@@ -295,9 +236,9 @@ if (mtpLeadForm) {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            name: name,
-            phone: phone,
-            service: service
+            name,
+            phone,
+            service: "MTP Consultation"
           })
         }
       );
@@ -307,6 +248,8 @@ if (mtpLeadForm) {
       mtpLeadForm.reset();
 
     } catch (error) {
+
+      console.error(error);
 
       alert("Something went wrong. Please try again.");
 
