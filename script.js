@@ -276,3 +276,17 @@ await fetch(
   });
 
 }
+
+
+// pop up 
+
+const mtpPopup = document.getElementById("mtpPopup");
+const mtpPopupClose = document.getElementById("mtpPopupClose");
+
+setTimeout(() => {
+    mtpPopup.classList.add("active");
+}, 8000);
+
+mtpPopupClose.addEventListener("click", () => {
+    mtpPopup.classList.remove("active");
+});

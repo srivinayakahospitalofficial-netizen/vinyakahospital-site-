@@ -81,27 +81,34 @@ src="https://www.facebook.com/tr?id=3462955270529454&ev=PageView&noscript=1"/>
 <body>
 
 
-<header class="site-header">
-  <nav class="navbar">
-<div class="brand">
+<header class="mtpnewheaderlimited-header">
+  <nav class="mtpnewheaderlimited-navbar">
 
-    <div class="brand-left">
-        <img src="assets/logo.webp" alt="" class="logo">
+    <div class="mtpnewheaderlimited-brand">
 
-        <div class="brand-text">
-            <span class="hospital-name">Sri Vinayaka Hospital</span>
-            <small class="hospital-tagline">
-                Women & Multispeciality Hospital
-            </small>
+      <div class="mtpnewheaderlimited-left">
+
+        <img src="assets/logo.webp" alt="" class="mtpnewheaderlimited-logo">
+
+        <div class="mtpnewheaderlimited-text">
+          <span class="mtpnewheaderlimited-name">
+            Sri Vinayaka Hospital
+          </span>
+
+          <small class="mtpnewheaderlimited-tagline">
+            Women & Multispeciality Hospital
+          </small>
         </div>
+
+      </div>
+
+      <div class="mtpnewheaderlimited-badges">
+        <img src="assets/25.jpg" alt="" class="mtpnewheaderlimited-badge">
+        <img src="assets/nabh.png" alt="" class="mtpnewheaderlimited-badge">
+      </div>
+
     </div>
 
-    <div class="brand-badges">
-        <img src="assets/25.jpg" alt="" class="badge-logo">
-        <img src="assets/nabh.png" alt="" class="badge-logo">
-    </div>
-
-</div>
   </nav>
 </header>
 
@@ -390,6 +397,72 @@ src="https://www.facebook.com/tr?id=3462955270529454&ev=PageView&noscript=1"/>
     </div>
 
 </section>
+
+
+<div class="mtp-float-actions">
+
+    <a href="https://wa.me/917204099115"
+       target="_blank"
+       class="mtp-float-whatsapp">
+        💬
+    </a>
+
+    <a href="tel:+917204099115"
+       class="mtp-float-call">
+        📞
+    </a>
+
+</div>
+
+<div class="mtp-popup-overlay" id="mtpPopup">
+
+    <div class="mtp-popup-box">
+
+        <button class="mtp-popup-close" id="mtpPopupClose">
+            ×
+        </button>
+
+        <img src="assets/popupimage.png"
+             alt="MTP Consultation"
+             class="mtp-popup-image">
+
+        <h3>Confidential MTP Consultation</h3>
+
+        <p>
+            Talk to our Women's Health Experts.
+        </p>
+
+        <form id="mtpPopupForm">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Mobile Number"
+                required
+            >
+
+            <button type="submit">
+                Book Free Consultation
+            </button>
+
+        </form>
+
+        <a href="tel:+917204099115"
+           class="mtp-popup-call">
+           📞 Call Now
+        </a>
+
+    </div>
+
+</div>
+
+
+
 <script>
 document.querySelectorAll('.faq-q').forEach(q=>{
 q.onclick=()=>{

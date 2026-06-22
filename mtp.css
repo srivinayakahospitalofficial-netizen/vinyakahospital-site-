@@ -163,12 +163,12 @@ body{
 
 .mtp-doctor-image{
     width:100%;
-    max-width:650px;
+    max-width:100%;
     height:auto;
 
     object-fit:contain;
 
-    transform:translateY(10px);
+    transform:none;
 
     filter:
         drop-shadow(0 15px 25px rgba(0,0,0,.08))
@@ -263,7 +263,8 @@ body{
 
         text-align:center;
 
-        padding:60px 30px;
+        padding:60px 20px;
+        margin-top:0;
     }
 
     .mtp-feature-list{
@@ -289,6 +290,10 @@ body{
 
 @media(max-width:768px){
 
+    .mtp-hero-section{
+        padding:30px 20px;
+    }
+
     .mtp-main-title{
         font-size:36px;
     }
@@ -297,9 +302,6 @@ body{
         font-size:17px;
     }
 
-    .mtp-doctor-image{
-        max-width:300px;
-    }
 
     .mtp-lead-card{
         padding:25px;
@@ -309,6 +311,27 @@ body{
         font-size:22px;
     }
 }
+
+@media(max-width:768px){
+
+    .mtp-doctor-image-wrap{
+        display:flex !important;
+        justify-content:center;
+        align-items:center;
+        margin:20px auto;
+        order:2;
+    }
+
+    .mtp-doctor-image{
+        width:100%;
+        max-width:280px;
+        height:auto;
+        display:block;
+        margin:auto;
+    }
+
+}
+
 
 /* =========================
    WOMEN CARE CARDS - 2026
@@ -1588,3 +1611,306 @@ body{
 
     cursor:pointer;
 }
+
+
+
+
+/* header new */
+
+.mtpnewheaderlimited-header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    width:100%;
+    background:#ffffff;
+    border-bottom:1px solid #eef2f7;
+    box-shadow:0 4px 20px rgba(15,23,42,.05);
+}
+
+.mtpnewheaderlimited-navbar{
+    max-width:1200px;
+    margin:0 auto;
+    padding:10px 16px;
+}
+
+.mtpnewheaderlimited-brand{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.mtpnewheaderlimited-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.mtpnewheaderlimited-logo{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+}
+
+.mtpnewheaderlimited-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.mtpnewheaderlimited-name{
+    font-size:28px;
+    font-weight:800;
+    color:#075f5f;
+    line-height:1.1;
+}
+
+.mtpnewheaderlimited-tagline{
+    font-size:12px;
+    font-weight:700;
+    color:#d63384;
+    margin-top:2px;
+    letter-spacing:.3px;
+}
+
+.mtpnewheaderlimited-badges{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.mtpnewheaderlimited-badge{
+    height:52px;
+    width:auto;
+    object-fit:contain;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .mtpnewheaderlimited-navbar{
+        padding:8px 12px;
+    }
+
+    .mtpnewheaderlimited-brand{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .mtpnewheaderlimited-left{
+        gap:8px;
+    }
+
+    .mtpnewheaderlimited-logo{
+        width:40px;
+        height:40px;
+    }
+
+    .mtpnewheaderlimited-name{
+        font-size:15px;
+    }
+
+    .mtpnewheaderlimited-tagline{
+        font-size:8px;
+    }
+
+    .mtpnewheaderlimited-badges{
+        gap:4px;
+    }
+
+    .mtpnewheaderlimited-badge{
+        height:32px;
+    }
+}
+
+/* sticky icons */
+
+.mtp-float-actions{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.mtp-float-whatsapp,
+.mtp-float-call{
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:26px;
+
+    color:#fff;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.15);
+
+    transition:.3s ease;
+}
+
+.mtp-float-whatsapp{
+    background:#25D366;
+}
+
+.mtp-float-call{
+    background:#0b4f9c;
+}
+
+.mtp-float-whatsapp:hover,
+.mtp-float-call:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+@media(max-width:768px){
+
+    .mtp-float-actions{
+        right:15px;
+        bottom:15px;
+        gap:10px;
+    }
+
+    .mtp-float-whatsapp,
+    .mtp-float-call{
+        width:54px;
+        height:54px;
+        font-size:24px;
+    }
+}
+
+/* pop up  */
+
+.mtp-popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999999;
+}
+
+.mtp-popup-overlay.active{
+    display:flex;
+}
+
+.mtp-popup-box{
+    width:92%;
+    max-width:380px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+.mtp-popup-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+}
+
+@media(max-width:768px){
+
+    .mtp-popup-image{
+        height:180px;
+        object-fit:contain;
+        object-position:center;
+        background:#fff;
+        padding:8px 12px;
+    }
+
+}
+
+
+.mtp-popup-close{
+    position:absolute;
+    top:12px;
+    right:12px;
+
+    width:38px;
+    height:38px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    color:#334155;
+
+    font-size:22px;
+    font-weight:600;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+
+    transition:.25s ease;
+}
+
+.mtp-popup-close:hover{
+    transform:scale(1.08);
+    background:#ffffff;
+    color:#ef4444;
+}
+
+.mtp-popup-box h3{
+    padding:15px 20px 5px;
+}
+
+.mtp-popup-box p{
+    padding:0 20px 15px;
+}
+
+.mtp-popup-box form{
+    padding:0 20px 20px;
+}
+
+.mtp-popup-box input{
+    width:100%;
+    height:50px;
+    margin-bottom:10px;
+    padding:0 15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.mtp-popup-box button[type="submit"]{
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:10px;
+    background:#0b4f9c;
+    color:#fff;
+    font-weight:700;
+}
+
+.mtp-popup-call{
+    display:block;
+    text-align:center;
+    margin:0 20px 20px;
+    padding:12px;
+    border-radius:10px;
+    background:#25D366;
+    color:#fff;
+    font-weight:700;
+}
+
+
+    
