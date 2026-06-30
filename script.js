@@ -283,9 +283,21 @@ await fetch(
 const mtpPopup = document.getElementById("mtpPopup");
 const mtpPopupClose = document.getElementById("mtpPopupClose");
 
-setTimeout(() => {
-    mtpPopup.classList.add("active");
-}, 8000);
+if (!localStorage.getItem("mtpLeadSubmitted")) {
+
+    function showMtpPopup() {
+        mtpPopup.classList.add("active");
+    }
+
+    setTimeout(showMtpPopup, 15000);
+
+    setInterval(() => {
+        if (!mtpPopup.classList.contains("active")) {
+            showMtpPopup();
+        }
+    }, 15000);
+
+}
 
 mtpPopupClose.addEventListener("click", () => {
     mtpPopup.classList.remove("active");
@@ -335,6 +347,8 @@ if (mtpPopupForm) {
             alert("Thank you! Our team will contact you shortly.");
 
             mtpPopupForm.reset();
+
+            localStorage.setItem("mtpLeadSubmitted", "true");
 
             mtpPopup.classList.remove("active");
 
