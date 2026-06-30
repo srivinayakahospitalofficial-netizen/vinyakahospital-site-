@@ -290,3 +290,67 @@ setTimeout(() => {
 mtpPopupClose.addEventListener("click", () => {
     mtpPopup.classList.remove("active");
 });
+
+
+const mtpPopupForm = document.getElementById("mtpPopupForm");
+
+if (mtpPopupForm) {
+
+    mtpPopupForm.addEventListener("submit", async function (e) {
+
+        e.preventDefault();
+
+        const submitBtn = mtpPopupForm.querySelector("button");
+
+        submitBtn.innerText = "Submitting...";
+        submitBtn.disabled = true;
+
+        const name =
+            mtpPopupForm.querySelector('input[type="text"]').value;
+
+        const phone =
+            mtpPopupForm.querySelector('input[type="tel"]').value;
+
+        try {
+
+            const response = await fetch(
+                "https://vinayaka-telegram-api-clean.onrender.com/send-lead",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name,
+                        phone,
+                        service: "MTP Popup Consultation"
+                    })
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("Failed to send lead");
+            }
+
+            alert("Thank you! Our team will contact you shortly.");
+
+            mtpPopupForm.reset();
+
+            mtpPopup.classList.remove("active");
+
+        } catch (error) {
+
+            console.error(error);
+
+            alert("Something went wrong. Please try again.");
+
+        } finally {
+
+            submitBtn.innerText = "Book Free Consultation";
+            submitBtn.disabled = false;
+
+        }
+
+    });
+
+}
